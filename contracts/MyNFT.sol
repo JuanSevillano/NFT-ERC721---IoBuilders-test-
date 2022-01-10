@@ -100,17 +100,28 @@ contract MyNFT is ERC721URIStorage {
         rand = rand % thirdWords.length;
         return thirdWords[rand];
     }
-    
 
     function random(string memory input) internal pure returns (uint256) {
         return uint256(keccak256(abi.encodePacked(input)));
     }
 
-
     function makeAnNFT() public {
         // Getting current token id
         uint256 newItemId = _tokenIds.current();
 
+        string memory first = pickRandomFirstWord(newItemId);
+        string memory second = pickRandomSecondWord(newItemId);
+        string memory third = pickRandomThirdWord(newItemId);
+
+        string memory finalSVG = string(
+            abi.encodePacked(baseSvg, first, second, third, '</text></svg>')
+        );
+
+        console.log("\n----");
+        console.log(finalSVG);
+        console.log("\n----");
+
+        
         // Mint nft using msg.sender
         _safeMint(msg.sender, newItemId);
         _setTokenURI(
