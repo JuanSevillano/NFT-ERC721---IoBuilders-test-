@@ -18,7 +18,7 @@ const init = async () => {
 
 const runInit = async () => {
     try {
-        await main();
+        await init();
         process.exit(0);
     } catch (error) {
         console.log(error);

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    id="svg2"
+    sodipodi:docname="_svgclean2.svg"
+    version="1.1"
+    inkscape:version="0.91pre3 r13670"
+    viewBox="0 0 452.64702 402.88454"
+  >
+  <sodipodi:namedview
+      id="namedview43"
+      bordercolor="#666666"
+      inkscape:pageshadow="2"
+      guidetolerance="10"
+      pagecolor="#ffffff"
+      gridtolerance="10"
+      inkscape:window-maximized="0"
+      inkscape:zoom="0.58579108"
+      objecttolerance="10"
+      borderopacity="1"
+      inkscape:current-layer="svg2"
+      inkscape:cx="226.32864"
+      inkscape:cy="201.42482"
+      inkscape:window-y="0"
+      inkscape:window-x="0"
+      inkscape:window-width="718"
+      showgrid="false"
+      inkscape:pageopacity="0"
+      inkscape:window-height="645"
+  />
+  <defs
+      id="defs4"
+    >
+    <clipPath
+        id="clipPath3001"
+        clipPathUnits="userSpaceOnUse"
+      >
+      <rect
+          id="rect7"
+          style="fill:none"
+          height="134.29"
+          width="191.43"
+          y="425.52"
+          x="1188"
+      />
+    </clipPath
+    >
+  </defs
+  >
+  <g
+      id="g9"
+      transform="translate(230.61 -355.28)"
+    >
+    <path
+        id="path11"
+        inkscape:connector-curvature="0"
+        transform="matrix(3.0146,0,0,2.9428,-3942,-895.14)"
+        d="m1237.3 611.07c-3.7977-27.548-1.9261-57.264-1.9261-67.069 0-5.5468 2.3327-16.637 4.0471-23.218 1.7143-6.5817 2.4155-14.413 2.4155-16.555 0-5.9719 8.5149-15.445 22.105-23.7 10.017-6.0852 14.485-9.7074 19.936-19.935 7.3296-13.752 3.8268-18.195 12.216-22.054 5.6462-2.5974 7.0592 1.6112 0.4998 7.3867-7.3412 6.464 1.8441 6.9414 0.964 16.898-0.7589 8.5851-1.4066 9.2106 9.0934 17.705 5.9973 4.8518 15.776 13.592 22.33 17.87 10.009 6.5318 11.6 7.3211 11.6 13.511 0 3.5264-11.226 13.98-26.9 13.632-21.422-0.47608-22.683-0.62114-14.438 23.266 2.9072 8.4229 6.6568 18.807 6.5512 23.613"
+        clip-path="url(#clipPath3001)"
+    />
+    <ellipse
+        id="ellipse13"
+        style="stroke:#ffffff;stroke-width:10.558;fill:none"
+        rx="28.168"
+        ry="27.497"
+        cy="557.49"
+        cx="-37.115"
+    />
+    <g
+        id="g15"
+        style="stroke-linejoin:round;stroke:#ffffff;stroke-width:1.6214;fill:none"
+        transform="matrix(4.7709 -.62391 .65416 4.5503 -7444.8 -762.15)"
+      >
+      <circle
+          id="circle17"
+          cy="141.95"
+          cx="1023"
+          r="3.283"
+          transform="matrix(.69231 0 0 .69231 768.82 398.63)"
+      />
+      <circle
+          id="circle19"
+          cy="141.95"
+          cx="1023"
+          r="3.283"
+          transform="matrix(.69231 0 0 .69231 766.29 402.16)"
+      />
+      <circle
+          id="circle21"
+          cy="141.95"
+          cx="1023"
+          r="3.283"
+          transform="matrix(.69231 0 0 .69231 764.02 406.71)"
+      />
+      <circle
+          id="circle23"
+          cy="141.95"
+          cx="1023"
+          r="3.283"
+          transform="matrix(.69231 0 0 .69231 762.5 411)"
+      />
+      <circle
+          id="circle25"
+          cy="141.95"
+          cx="1023"
+          r="3.283"
+          transform="matrix(.69231 0 0 .69231 761.24 415.55)"
+      />
+      <circle
+          id="circle27"
+          cy="141.95"
+          cx="1023"
+          r="3.283"
+          transform="matrix(.69231 0 0 .69231 760.23 420.09)"
+      />
+      <circle
+          id="circle29"
+          cy="141.95"
+          cx="1023"
+          r="3.283"
+          transform="matrix(.69231 0 0 .69231 759.22 424.64)"
+      />
+      <circle
+          id="circle31"
+          cy="141.95"
+          cx="1023"
+          r="3.283"
+          transform="matrix(.69231 0 0 .69231 758.46 428.93)"
+      />
+      <circle
+          id="circle33"
+          cy="141.95"
+          cx="1023"
+          r="3.283"
+          transform="matrix(.69231 0 0 .69231 757.7 433.98)"
+      />
+    </g
+    >
+    <path
+        id="path35"
+        style="fill:#ffffff"
+        inkscape:connector-curvature="0"
+        d="m-24.174 557.12c0.11797-20.611-21.672-9.0963-24.933 0.0708 2.0278 12.629 24.821 20.452 24.933-0.0708z"
+    />
+    <path
+        id="path37"
+        inkscape:connector-curvature="0"
+        d="m-18.035 356.01c-8.385-2.3784-179.56-0.31969-195.56 28.134 18.994 44.849 42.56 89.482 38.452 135.43-3.0589 5.7444-24.872 13.398-35.798 19.68-33.597 19.313-29.607 34.165 54.953 8.0539 43.245-13.354 71.506-24.219 108.92-25.172 23.758-0.60635 54.962-2.1123 69.24 2.7232 24.167 8.1833 40.23 16.663 43.224-6.6198 2.21-17.06-10.193-18.4-62.763-18.14-12.368-38.84-17.763-92.22-20.661-144.08z"
+    />
+    <path
+        id="path39"
+        inkscape:connector-curvature="0"
+        d="m218.55 623.7c-8.5018-5.6888-37.143-5.3689-40.353 0-4.9451 12.074-2.5091 24.95-2.3192 37.581-30.736 0.54972-33.165-40.751-104.36-38.034l-1.9099 6.9352c60.216-0.42114 58.98 58.311 113.78 60.222 40.401 1.4091 42.92-39.631 35.168-66.705"
+    />
+  </g
+  >
+  <metadata
+      id="metadata41"
+    >
+    <rdf:RDF
+      >
+      <cc:Work
+        >
+        <dc:format
+          >image/svg+xml</dc:format
+        >
+        <dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+        />
+        <cc:license
+            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
+        />
+        <dc:publisher
+          >
+          <cc:Agent
+              rdf:about="http://openclipart.org/"
+            >
+            <dc:title
+              >Openclipart</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:publisher
+        >
+      </cc:Work
+      >
+      <cc:License
+          rdf:about="http://creativecommons.org/licenses/publicdomain/"
+        >
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Reproduction"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Distribution"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
+        />
+      </cc:License
+      >
+    </rdf:RDF
+    >
+  </metadata
+  >
+</svg
+>
