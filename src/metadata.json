@@ -1,0 +1,14 @@
+{
+	"name": "De Geest Van Gaston",
+    "symbol": "GSTN",
+	"description": "NFT as participant in the interactive installation of De Geest Van Gaston",
+	"image": "https://ipfs.filebase.io/ipfs/QmeUcC7u4dzPitzX1obN7KnPtsUFEHCK8fdpkYjWGboHPM",
+	"properties": {
+        "instalattion": "installation name",
+		"city": "Madrid",
+		"collaborators": {
+			"management": "Pello",
+			"web3 developer": "Juan"
+		}
+	}
+}
