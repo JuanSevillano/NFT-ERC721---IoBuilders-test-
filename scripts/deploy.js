@@ -7,7 +7,7 @@ const init = async () => {
     console.log('Gas used:', receipt.gasUsed._hex);
 
     // Mint an nft and wait for it
-    let txn = await nftContract.makeAnNFT();
+    let txn = await nftContract.airdrop();
     await txn.wait();
 
     // Second mint
