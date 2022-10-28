@@ -8,7 +8,8 @@ const main = async () => {
 
     // Mint an nft and wait for it
     let txn = await nftContract.makeAnNFT();
-    await txn.wait();
+    const receipt = await txn.wait();
+    
 
     // Second mint
     txn = await nftContract.makeAnNFT();

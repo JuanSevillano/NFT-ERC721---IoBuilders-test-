@@ -1,5 +1,5 @@
 require("@nomiclabs/hardhat-waffle");
-
+const { API_KEY, PRIVATE_KEY } = require('dotenv');
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
@@ -19,9 +19,9 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 module.exports = {
   solidity: "0.8.0",
   networks: {
-    rinkeby: {
-      url: 'https://eth-rinkeby.alchemyapi.io/v2/tBoMG0YKljNKnRV8rv2ONjayZ4_lUASk',
-      accounts: ['b250b40563635dc7392b818d8a7534b58c6d02b043428df4e83ec0d93f0e447c']
+    goerli: {
+      url: API_KEY,
+      accounts: [`0x${PRIVATE_KEY}`]
     }
   }
 };
