@@ -1,1 +1,1 @@
-export const selected_accounts = (wallets) => ([...wallets]);
+module.exports = (wallets) => ([...wallets]);
