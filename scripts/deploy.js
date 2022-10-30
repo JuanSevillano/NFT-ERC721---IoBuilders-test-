@@ -1,18 +1,29 @@
+import { accounts } from '../src/wallets/1k_accounts';
+import { ten_accounts } from '../src/wallets/10_accounts';
+import { selected_accounts } from '../src/wallets/selected_accounts';
 
 const init = async () => {
-    const nftContractFactory = await hre.ethers.getContractFactory('MyNFT');
-    const nftContract = await nftContractFactory.deploy();
-    const receipt = await nftContract.deployed();
-    console.log('Contract deployed to:', nftContract.address);
-    console.log('Gas used:', receipt.gasUsed._hex);
+    const factory = await hre.ethers.getContractFactory('NFTCollection');
+    const [owner] = await hre.ethers.getSigners();
+    const contract = await factory.deploy();
+    const receipt = await contract.deployed();
 
-    // Mint an nft and wait for it
-    let txn = await nftContract.airdrop();
-    await txn.wait();
+    console.log('Gas used:', receipt.gasPrice.value, "\n");
+    console.log('Contract deployed to:', contract.address, "\n");
+    console.log("Contract deployed by (Owner): ", owner.address, "\n");
 
-    // Second mint
-    txn = await nftContract.makeAnNFT();
+    // Mint an nft and wait for
+    console.log('Airdrop to 1K accounts starting...', "\n");
+    const txn = await contract.airdrop(accounts);
     await txn.wait();
+    
+    console.log("NFTs airdropped successfully!", "\n");
+
+  console.log("Current NFT balances:", "\n")
+  for (let i = 0; i < airdropAddresses.length; i++) {
+    const bal = await contract.balanceOf(airdropAddresses[i]);
+    console.log(`${i + 1}. ${airdropAddresses[i]}: ${bal}`);
+  }
 
 }
 
