@@ -6,7 +6,8 @@ const init = async () => {
 
     const transaction = await receipt.deployTransaction.wait();
 
-    console.log('Deploy transaction:', transaction.gasUsed.value, "\n");
+    console.log('Deploy transaction:', transaction, "\n");
+    console.log('Contract :', receipt, "\n");
     console.log('Contract deployed to:', contract.address, "\n");
     console.log("Contract deployed by (Owner): ", owner.address, "\n");
     
@@ -36,8 +37,14 @@ const init = async () => {
         1Eth = 1600$
      *
      *
-        Outcome: 
+        Outcome: // Art Exhibition
         2845483 * 0.000000007 = 0,019918381 eth * 1600$ = ~ 32$
+
+        Outcome: // Tickets project 
+        25120903 * 0.000000008 = 0,200967224 eth * 1600 =~ 320$ per Smart contract
+        Developer Smart-contract / month = 
+        Frontend: Landing, conectar a wallet. Mint / Stake / rewards / withdraw
+        Backend: (Conectar blockchain, crear servicios nesearios del modelo de negocio )
      */
 
 }
