@@ -1,4 +1,4 @@
-module.exports = [
+const accounts = [
     '0x766318f112b83a4b6f1282fbd0faf9b01f563541',
     '0x306e5eb9ff2bbadcd5aaa8d56819e18e9c1d24e5',
     '0xc707174a6d5d5d49d42895a09227cf55aabc00cb',

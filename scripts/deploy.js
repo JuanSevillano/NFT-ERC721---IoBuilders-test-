@@ -1,3 +1,9 @@
+const wallets = [
+    '0xC81784A8C51B0F3B64759C49e27BfF363b9f9c92',
+    '0x766318f112b83a4b6f1282fbd0faf9b01f563541',
+    '0x306e5eb9ff2bbadcd5aaa8d56819e18e9c1d24e5',
+]
+
 const init = async () => {
     const factory = await hre.ethers.getContractFactory('NFTCollection');
     const [owner] = await hre.ethers.getSigners();
@@ -6,65 +12,77 @@ const init = async () => {
 
     const transaction = await receipt.deployTransaction.wait();
 
-    console.log('Deploy transaction:', transaction, "\n");
-    console.log('Contract :', receipt, "\n");
+    // console.log('Deploy transaction:', transaction, "\n");
+    // console.log('Contract :', receipt, "\n");
     console.log('Contract deployed to:', contract.address, "\n");
     console.log("Contract deployed by (Owner): ", owner.address, "\n");
-    
-    // // Mint an nft and wait for
-    // console.log('Airdrop to 1K accounts starting...', "\n");
-    // const txn = await contract.airdrop(wallets);
-    // await txn.wait();
-    // console.log('Airdrop receipt:', txn, "\n");
-    
-    // console.log("NFTs airdropped successfully!", "\n");
 
-    // console.log("Current NFT balances:", "\n")
-    // for (let i = 0; i < wallets.length; i++) {
-    //     const bal = await contract.balanceOf(wallets[i]);
-    //     console.log(`${i + 1}. ${wallets[i]}: ${bal}`);
-    // }
-
-    /**
-     *  USD Cost of deployment =
-     *  Units (gasPrice) * ETH price per unit * USD value per eth 
-     * 
-     * Data = 
-        Units = 2845483
-        MED GAS PRICE
-        7 Gwei ($0.24)
-        0.000000007 Eth = 7Gwei
-        1Eth = 1600$
-     *
-     *
-        Outcome: // Art Exhibition
-        2845483 * 0.000000007 = 0,019918381 eth * 1600$ = ~ 32$
-
-        Outcome: // Tickets project 
-        25120903 * 0.000000008 = 0,200967224 eth * 1600 =~ 320$ per Smart contract
-        Developer Smart-contract / month = 
-        Frontend: Landing, conectar a wallet. Mint / Stake / rewards / withdraw
-        Backend: (Conectar blockchain, crear servicios nesearios del modelo de negocio )
-     */
-
+    return contract
 }
+
+
+const mintToWallets = async (contract) => {
+    let minted = [];
+    
+    for(let i = 0; i < wallets.length; i++){
+        const address = wallets[i];
+        const tnx = await contract.publicMint(address);
+        const nft = await tnx.wait();
+        console.log('minted to: ', address);
+        console.log('taxn hash: ', nft.transactionHash);
+        const userMinted = {
+            address,
+            token: nft.token
+        }
+        minted.push(userMinted);
+    }
+    
+    return minted;
+}
+
+const revealCollection = async (contract) => {
+    const newBaseURI = 'https://ipfs.io/ipfs/QmVVLtcxJssGstMHeuJuWwiYaXd29ZqGJNX2Af1DXJssv9?filename='
+
+    const prevURI = await contract.baseURI(); // check new baseURI
+    console.log('Previous baseURI: ', prevURI);
+
+    await contract.reveal(true); // revealed
+    await contract.setRevealURI(newBaseURI); // setBaseURI
+
+    const response = await contract.baseURI(); // check new baseURI
+    console.log('Response baseURI: ', response);
+}
+
 
 const runInit = async () => {
     try {
-        await init();
-        process.exit(0);
+        console.log('==============', 'Start deploy smart-contract','==============');
+        const contract = await init();
+        console.log('==============', 'Finished','==============');
+
+        console.log('==============', 'Start mint previous reveal','==============');
+        const minted = await mintToWallets(contract);
+        console.log('Minted', minted);
+        console.log('==============', 'Finished','==============');
+        
+       return contract
     } catch (error) {
         console.log(error);
         process.exit(1);
     }
 }
 
-const wallets = [
-    '0x766318f112b83a4b6f1282fbd0faf9b01f563541',
-    '0x306e5eb9ff2bbadcd5aaa8d56819e18e9c1d24e5',
-    '0xc707174a6d5d5d49d42895a09227cf55aabc00cb',
-    '0xa5999e05d84b8709f701f6addbc307ba49d6822f',
-    '0xC81784A8C51B0F3B64759C49e27BfF363b9f9c92',
-]
-
-runInit();
+runInit().then((contract) => {
+    console.log('finished: SC Address: ', contract.address)
+    // try{
+    //     setTimeout(async () => {
+    //         console.log('==============', 'Start revealing','==============');
+    //         await revealCollection(contract)    
+    //         console.log('==============', 'Finished','==============');
+    //         process.exit(0);
+    //     }, 5 * 60 * 100);
+    // } catch (error) {
+    //     console.log(error);
+    //     process.exit(1);
+    // }
+})
